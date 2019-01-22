@@ -1,20 +1,36 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <compact v-model="colors" />
+
   </div>
 </template>
 <script>
 import Card from "@/components/Card";
+import { Compact } from "vue-color";
 
 export default {
   name: "App",
   components: {
-    Card
+    Card,
+    Compact
   },
   data() {
-    return {
-      //
-    };
+    return { colors: { r: 244, g: 78, b: 59 } };
   }
 };
 </script>
+
+<style lang="scss">
+.vc-compact {
+  box-sizing: content-box;
+}
+/* .vc-compact-colors {
+  width: 40%;
+  height: inherit;
+}
+.vc-compact-color-item {
+  width: inherit;
+  height: inherit;
+  margin-right: 5px;
+} */
+</style>
