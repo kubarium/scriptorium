@@ -16,16 +16,10 @@
 
           <v-spacer></v-spacer>
           <v-btn icon>
-            <v-icon>crop_square</v-icon>
+            <v-icon>fullscreen</v-icon>
           </v-btn>
           <v-btn icon>
             <v-icon>touch_app</v-icon>
-          </v-btn>
-          <v-btn icon>
-            <v-icon>palette</v-icon>
-          </v-btn>
-          <v-btn icon>
-            <v-icon>delete</v-icon>
           </v-btn>
         </v-toolbar>
 
@@ -39,6 +33,7 @@
             <fog-list-item
               :key="`item-${index}`"
               :item="item"
+              v-else
             />
 
           </template>
@@ -56,11 +51,11 @@ export default {
   data() {
     return {
       items: [
-        { title: "Batch Edit", icon: "folder" },
+        { title: "Batch Edit" },
         { divider: true },
-        { title: "Suck" },
+        { title: "Suck", active: true },
         { divider: true },
-        { title: "Duck" },
+        { title: "Duck", active: false },
         { divider: true },
         { title: "Yuck", locked: true }
       ]
